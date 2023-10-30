@@ -1,15 +1,31 @@
+import { useEffect } from 'react';
 import Header from './composants/Header';
 import Footer from './composants/Footer';
 import Service from './Pages/Presentation';
 import './App.css';
 import Home from './Pages/Home';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from 'react-router-dom';
 import Contact from './Pages/Contact';
 import Cycle from './Pages/Cycle';
 
 function App() {
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+    return null;
+  };
+
   return (
     <Router>
+      <ScrollToTop />
       <div className="mb-24">
         <Header />
       </div>

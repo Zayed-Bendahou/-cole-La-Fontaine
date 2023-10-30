@@ -9,9 +9,9 @@ const Home = () => {
       <section className="">
         <Hero />
       </section>
-      <section className="sm:px-16 px-8 sm:py-24 py-12">
+      {/* <section className="sm:px-16 px-8 sm:py-24 py-12">
         <AboutUs />
-      </section>
+      </section> */}
       <section className="sm:px-16 px-8 sm:py-24 py-12">
         <Grades />
       </section>
